@@ -1,0 +1,20 @@
+Workshop 2 has made me learn a lot about dynamic memory using pointers. Throughout this workshop, I made a strong grip using allocations and deallocations of the dynamic memory. There were several functions that were used by me in both the lab work as well as DIY work which includes all the basic utils function as well as some overload functions. There were issues faced by me in the second part of the code such as i was not able to perform sorting, but then I looked over the Lab part of code where sorting was already done. Taking reference from there, I was able to sort successfully in my code. Moreover, when I ran the program in matrix it showed me that there was a memory leak in my beginSearch function which is given below:
+bool beginSearch(const char* filename)
+	{
+		monthSearching = 0;
+		totalrecords = 0;
+		int i = 0, j = 0;
+		if (openFile(filename)) {
+			totalrecords = nRecords();
+			records = new Employee[totalrecords];
+			for (j = 0;j < totalrecords;j++) 
+			{
+				i = i + load(records[j]);
+			}			
+			closeFile(); // This was the solution to my error.
+		}
+		cout << "Birthdate search program\n";
+		return true;
+	}
+The memory leak was happening because I didn't close my file after opening it to load the records in the dynamic array I created. Therefore when I closed the file in the function, my memory leak issue was resolved. The lab part of the code helped me lot in the DIY part as the functions (nRecords) and (sort) in my DIY code was referred from the lab part itself.
+To keep in nutshell, dynamic arrays and dynamic memory makes work easy when dealing with such programs as keeping track of a record. For instance, the birthday program(DIY) and the student grade track(lab) program.

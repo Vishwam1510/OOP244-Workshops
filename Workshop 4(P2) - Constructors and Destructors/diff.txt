@@ -1,0 +1,14 @@
+In line number 21 of your output:
+The output should be:
+| Number of robots to be charged: 2                  |
+                                  ^
+But your output is: 
+| Number of robots to be charged: 4                  |
+                                  ^
+
+Unmatched character details:
+The character in column 35 is supposed to be:
+  [2] ASCII code(50)
+but you printed
+  [4] ASCII code(52)
+

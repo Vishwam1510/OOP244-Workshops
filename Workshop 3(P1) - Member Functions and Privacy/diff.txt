@@ -1,0 +1,14 @@
+In line number 44 of your output:
+The output should be:
+In battle of Atlantis and Ambrosia, Atlantis is victorious!
+                                                          ^
+But your output is: 
+In battle of Atlantis and Ambrosia, Atlantis is victorious
+                                                           ^
+
+Unmatched character details:
+The character in column 60 is supposed to be:
+  [!] ASCII code(33)
+but you printed
+  [Empty Line] ASCII code(0)
+

@@ -1,0 +1,14 @@
+In line number 37 of your output:
+The output should be:
+Library is at its maximum capacity!
+^
+But your output is: 
+Adding new publication to the library
+^
+
+Unmatched character details:
+The character in column 1 is supposed to be:
+  [L] ASCII code(76)
+but you printed
+  [A] ASCII code(65)
+
